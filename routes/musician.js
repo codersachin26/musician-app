@@ -5,11 +5,9 @@ const jsonParser = bodyParser.json();
 const schema = require('../store/schema');
 
 
-// router.get('/test', (req, res) => {
-//   res.status('200').send("Status: ok!");
-// });
 
-// retrieve all musicians from data store
+
+// retrieve all musicians from data store add
 router.get('/all', (req, res) => {
   const { musician } = req.app.locals;
   musician.getMusicians(req.params.id, (err, returnedMusicians) => {
